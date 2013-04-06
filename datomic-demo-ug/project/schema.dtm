@@ -1,0 +1,47 @@
+[
+ ;; osoba
+
+ {:db/id #db/id[:db.part/db]
+  :db/ident :person/name
+  :db/valueType :db.type/string
+  :db/cardinality :db.cardinality/one
+  :db/fulltext true
+  :db/doc "Imie osoby"
+  :db.install/_attribute :db.part/db}
+
+ {:db/id #db/id[:db.part/db]
+  :db/ident :person/pesel
+  :db/valueType :db.type/string
+  :db/cardinality :db.cardinality/one
+  :db/doc "Pesel osoby"
+  :db.install/_attribute :db.part/db}
+  
+ {:db/id #db/id[:db.part/db]
+  :db/ident :person/gender
+  :db/valueType :db.type/ref
+  :db/cardinality :db.cardinality/one
+  :db/doc "Plec osoby"
+  :db.install/_attribute :db.part/db} 
+
+ ;; enum dla person/gender
+ [:db/add #db/id[:db.part/user] :db/ident :person.gender/man]
+ [:db/add #db/id[:db.part/user] :db/ident :person.gender/woman]
+ 
+ {:db/id #db/id[:db.part/db]
+  :db/ident :person/lang
+  :db/valueType :db.type/ref
+  :db/cardinality :db.cardinality/many
+  :db/doc "Jezyk uzywany"
+  :db.install/_attribute :db.part/db}
+ 
+ ;; jezyk
+ 
+ {:db/id #db/id[:db.part/db]
+  :db/ident :lang/name
+  :db/valueType :db.type/string
+  :db/cardinality :db.cardinality/one
+  :db/unique :db.unique/identity
+  :db/doc "Nazwa jezyka"
+  :db.install/_attribute :db.part/db}
+
+ ]

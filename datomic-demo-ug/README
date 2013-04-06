@@ -1,40 +1,11 @@
 ====================================
-Documentation 
+Materia³y do prezentacji 
 
-Getting Started (Free Edition):    http://docs.datomic.com/getting-started.html
-Setting Up Storage (Pro Edition):  http://docs.datomic.com/storage.html 
-All docs:                          http://datomic.com
-
-====================================
-Install in your local maven repos:
-
-Replace DATOMIC_VERSION in the snippet below with the contents of the 
-VERSION file at the root of this distribution.
-
-mvn install:install-file -DgroupId=com.datomic -DartifactId=datomic-free -Dfile=datomic-free-${DATOMIC-VERSION}.jar -DpomFile=pom.xml
+1. Datomic http://www.datomic.com/
+2. Clojure http://clojure.org/
+3. Riak https://basho.com/riak/
+4. Darmowy hosting baz riak http://riakon.com/
+5. Materia³y ró¿ne nt. Clojure i Datomic http://www.infoq.com/author/Rich-Hickey
+6. Kila rzeczy na temat riak http://nosql.mypopescu.com/tagged/riak
 
 ====================================
-Using from maven:
-
-Replace DATOMIC_VERSION in the snippet below with the contents of the 
-VERSION file at the root of this distribution. Then add the snippet to the 
-dependencies section of your pom.xml:
-
-    <dependency>
-      <groupId>com.datomic</groupId>
-      <artifactId>datomic-free</artifactId>
-      <version>${DATOMIC_VERSION}</version>
-    </dependency>
-
-====================================
-Using from leiningen:
-
-Replace DATOMIC_VERSION in the snippet below with the contents of the 
-VERSION file at the root of this distribution. Then add the snippet to the 
-dependencies section of your project.clj:
-
-   [com.datomic/datomic-free "${DATOMIC_VERSION}"]
-
-
-
-

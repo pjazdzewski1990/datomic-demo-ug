@@ -1,0 +1,8 @@
+[
+{:db/id #db/id[:db.part/user -1000101], :lang/name "JAVA"}
+{:db/id #db/id[:db.part/user -1000102], :lang/name "C#"}
+{:db/id #db/id[:db.part/user -1000103], :lang/name "CLOJURE"}
+
+{:person/name "Jan", :person/pesel "1234567890", :person/gender :person.gender/man, :db/id #db/id[:db.part/user -1000001], :person/lang #db/id[:db.part/user -1000101, :db.part/user -1000103]}
+{:person/name "Ewa", :person/pesel "1234567890", :person/gender :person.gender/woman, :db/id #db/id[:db.part/user -1000002], :person/lang #db/id[:db.part/user -1000102]}
+]
