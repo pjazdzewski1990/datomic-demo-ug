@@ -13,13 +13,9 @@
 
 (def data (read-string (slurp "project/data.dtm")))
 
-(first data)
-(second data)
-(nth data 2)
-
 @(d/transact conn data)
 
-(def results (q '[:find ?c :where [?c :community/name]] (db conn)))
+(def results (q '[:find ?c :where [?c :person/name]] (db conn)))
 (count results)
 
 (def id (ffirst results))
@@ -27,3 +23,8 @@
 
 (keys entity)
 (:community/name entity)
+
+[:find ?n ?u
+ :where
+ [?c :person/name ?n]
+ [?c :person/url ?u]]
